@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clt0sngf6tm3a"]
 
-[ext_resource type="Shader" path="res://shaders/chunk.gdshader" id="1_ekffp"]
+[ext_resource type="Shader" path="res://scripts/chunk.gdshader" id="1_ekffp"]
 [ext_resource type="Script" path="res://scripts/chunk.gd" id="2_eoanu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x2p6o"]

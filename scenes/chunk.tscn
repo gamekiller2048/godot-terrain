@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://clt0sngf6tm3a"]
+
+[ext_resource type="Shader" path="res://shaders/chunk.gdshader" id="1_ekffp"]
+[ext_resource type="Script" path="res://scripts/chunk.gd" id="2_eoanu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x2p6o"]
+render_priority = 0
+shader = ExtResource("1_ekffp")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ph205"]
+
+[node name="Chunk" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_x2p6o")
+mesh = SubResource("ArrayMesh_ph205")
+script = ExtResource("2_eoanu")

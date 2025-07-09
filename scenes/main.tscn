@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://xiveek6x3t6y"]
+
+[ext_resource type="PackedScene" uid="uid://ndrd8lyxil21" path="res://scenes/terrain.tscn" id="1_d2ymr"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ygkq5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r2fsx"]
+
+[sub_resource type="Sky" id="Sky_626ta"]
+sky_material = SubResource("ProceduralSkyMaterial_r2fsx")
+
+[sub_resource type="Environment" id="Environment_2uvdc"]
+background_mode = 2
+sky = SubResource("Sky_626ta")
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_ygkq5")
+
+[node name="Terrain" parent="." instance=ExtResource("1_d2ymr")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 98.4375
+near = 0.01
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2uvdc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.14085, 0.748342, -0.648187, 1.3219e-08, 0.654714, 0.755877, 0.990031, 0.106465, -0.0922163, 0, 8.74174, 0)
